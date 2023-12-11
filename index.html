@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Outfit Anyone">
+  <meta property="og:title" content="Outfit Anyone" />
+  <meta property="og:description"
+    content="Outfit Anyone: Ultra-high quality virtual try-on for Any Clothing and Any Person " />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/video_t1.png" />
+  <meta property="og:image:width" content="2412" />
+  <meta property="og:image:height" content="1394" />
+
+
+  <meta name="twitter:title" content="Outfit Anyone">
+  <meta name="twitter:description"
+    content="Outfit Anyone: Ultra-high quality virtual try-on for Any Clothing and Any Person ">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/video_t1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Image-to-Video">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Outfit Anyone</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href=https://github.com/HumanAIGC>
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://humanaigc.github.io/animate-anyone/">
+              AnimateAnyone
+            </a>
+            <a class="navbar-item" href="https://tomguluson92.github.io/projects/cloth2tex/">
+              Cloth2Tex
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Outfit Anyone: Ultra-high quality virtual try-on for Any Clothing and Any Person </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Institute for Intelligent Computing, Alibaba Group</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://github.com/HumanAIGC/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-home"></i>
+                    </span>
+                    <span>Stay tuned...</span>
+                  </a>
+                </span>
+
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2311.17117.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <!-- <div class="hero-body"> -->
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="content/video/teaser.mp4" type="video/mp4">
+        </video> -->
+        <!-- <div id="results-carousel44" class="carousel results-carousel"> -->
+          <style>
+            .teaser-group {
+              display: flex;
+              justify-content: space-between;
+            }
+            .teaser-group img {
+              width: 48%; /* 各占一半，留下一些间隔 */
+              object-fit: cover; /* 保持图片纵横比 */
+            }
+          </style>
+          <div id="group1" class="teaser-group"></div>
+          <div id="group2" class="teaser-group"></div>
+        <!-- </div> -->
+
+      <!-- </div> -->
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Virtual try-on has become a transformative technology, empowering users to experiment with fashion without ever having to physically try on clothing. However, existing methods often struggle with generating high-fidelity and detail-consistent results. Diffusion models have demonstrated their ability to generate high-quality and photorealistic images, but when it comes to conditional generation scenarios like virtual try-ons, they still face challenges in achieving control and consistency. Outfit Anyone addresses these limitations by leveraging a two-stream conditional diffusion model, enabling it to adeptly handle garment deformation for more lifelike results. It distinguishes itself with scalability—modulating factors such as pose and body shape—and broad applicability, extending from anime to in-the-wild images. Outfit Anyone's performance in diverse scenarios underscores its utility and readiness for real-world deployment.         
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Method -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2">Method</h2>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="content/images/framework/fm.jpg" alt="MY ALT TEXT" style="width: 70%; height: 70%;" />
+        </div>
+        <div class="item">
+          <h2 class="content has-text-justified">
+            <p style="font-size: 1.2em;">
+              <!-- As shown above, The conditional Diffusion Model at the core of our approach accepts images of the <b style="color:rgb(16, 162, 16)">model</b>, the <b style="color: rgb(153, 153, 28);">garments</b>, and <b style="color: rgb(0, 132, 255);">text prompts</b> as inputs, with the garment images serving as the controlling information. The network is internally divided into <b>two streams</b> that process the <b>model</b> and <b>garment</b> information separately. 
+            These streams are then integrated through a <b>fusion network</b>, enabling the transfer of garment details onto the model's features.
+            Building upon this network structure, we have developed <b>Outfit Anyone</b>, which consists of two principal components. 
+            The first is the <b style="color: rgb(72, 210, 164);">Zero-shot Try-on Network</b>, designed to generate the initial results of the try-on. 
+            While second component is the mighty <b style="color: rgb(255, 213, 205);">Post-hoc Refiner</b>, 
+            which is utilized to enhance the details of the clothing in the generated images. -->
+
+            The conditional Diffusion Model central to our approach processes images of the model, garments, and accompanying text prompts, using garment images as the control factor. 
+            Internally, the network segregates into two streams for independent processing of model and garment data. 
+            These streams converge within a fusion network that facilitates the embedding of garment details onto the model's feature representation. 
+            On this foundation, we have established <b>Outfit Anyone</b>, comprising two key elements: the Zero-shot Try-on Network for initial try-on imagery, 
+            and the Post-hoc Refiner for detailed enhancement of clothing and skin texture in the output images.
+          </p>
+          </h2>
+
+          <!-- <h2 class="title is-3">Post-Hoc Refiner</h2> -->
+          <div class="item">
+            <!-- <div style="display: flex; justify-content: center; align-items: center;">
+              <img src="content/images/framework/refiner.jpg" alt="MY ALT TEXT" style="width: 70%; height: 70%;" />
+            </div> -->
+          <!-- <h2 class="content has-text-justified">
+            <p style="font-size: 1.2em;">To enhance the texture and authenticity of clothing and skin, 
+              we have developed <b>Refiner</b>, a tool that takes our generated results to the next level by improving their quality. 
+              This allows us to achieve a true-to-life fitting effect.</p>
+          </h2> -->
+        </div>
+    </div>
+  </section>
+  <!-- End Method -->
+
+  <style>
+    .gifImage:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+    }
+
+    .paused {
+      animation-play-state: paused;
+    }
+
+  </style>
+  
+
+<head>
+    <title>place gif</title>
+    <style>
+        .gif-container {
+            display: flex;
+        }
+
+        .gif {
+            width: 660px; /* 设置 GIF 的宽度 */
+            height: 400px; /* 设置 GIF 的高度 */
+        }
+    </style>
+</head>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Various Try-On Results</h2>
+        <br></br>
+        <!-- Outfit Swapping -->
+        <h3 class="title is-4">Real World</h3>
+        <h2 class="content has-text-justified">
+          <p style="font-size: 1.4em;">We showcase Outfit Anyone's capability for versatile outfit changes, including full ensembles and individual pieces, in realistic scenarios. </p>
+        </h2> 
+
+        <!-- Different garments -->
+        <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+          <h3 class="title is-4"> Individual Garment</h3>
+        </div>
+     
+        <style>
+          .outfit-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .outfit-item img {
+            width: 100%; /* 各占一半，留下一些间隔 */
+            object-fit: cover; /* 保持图片纵横比 */
+          }
+          .item-gif-container {
+            width: 80%; /* 占据父元素的80%宽度 */
+            margin: auto; /* 水平方向上创建相同的空白 */
+          }
+        </style>
+        <div class="outfit-item">
+          <div class="item-gif-container">
+            <img id="gifImage3" alt="MY ALT TEXT"/>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; height: 80px;">
+          <h3 class="title is-4">Outfit</h3>
+        </div>
+          <style>
+            .outfit-group {
+              display: flex;
+              justify-content: center;
+            }
+            .outfit-group img {
+              width: 40%; /* 各占一半，留下一些间隔 */
+              object-fit: cover; /* 保持图片纵横比 */
+            }
+          </style>
+            <div class="outfit-group">
+              <img loading="lazy" id="gifImage1" alt="MY ALT TEXT" />
+              <img loading="lazy" id="gifImage2" alt="MY ALT TEXT" />
+            </div>
+        <br></br>
+        <!-- End Different garments -->
+        <!-- Different bodyshapes -->
+        <h3 class="title is-4">Bizarre Fashion</h3>
+        <h2 class="content has-text-justified">
+          <p style="font-size: 1.4em;">Here we showcase our model's ability to handle a wide range of eccentric and unique clothing styles, dress them onto the models, and even create corresponding outfit combinations when necessary.</p>
+        </h2>
+        <div id="results-carousel44" class="carousel results-carousel">
+
+          <div class="item item-video1">
+            <img src="content/images/style/style1.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+  
+          <div class="item item-video1">
+            <img loading="lazy" src="content/images/style/style6.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video1">
+            <img loading="lazy" src="content/images/style/style3.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video1">
+            <img loading="lazy" src="content/images/style/style4.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video1">
+            <img loading="lazy" src="content/images/style/style5.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/style/style2.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+  
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/style/style8.jpg" height="900" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/style/style7.jpg" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/style/style9.jpg" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/style/style10.jpg" alt="MY ALT TEXT" />
+          </div>
+        </div>
+        <br></br>
+        <!-- End Different bodyshapes -->
+        <!-- Different bodyshapes -->
+        <h3 class="title is-4">Various Body Shapes</h3>
+        <h2 class="content has-text-justified">
+          <p style="font-size: 1.4em;">Our model demonstrates the ability to generalize to various body types, including those that are fit, curve and petite, 
+            thereby catering to the try-on demands of individuals from all walks of life.</p>
+        </h2>
+        <div id="results-carousel22" class="carousel results-carousel">
+          <div class="item item-video1">
+            <img src="content/images/bs/3.jpg" alt="MY ALT TEXT" />
+          </div>
+  
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/bs/2.jpg" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/bs/1.jpg" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/bs/4.jpg" alt="MY ALT TEXT" />
+          </div>
+
+          <div class="item item-video2">
+            <img loading="lazy" src="content/images/bs/5.jpg" alt="MY ALT TEXT" />
+          </div>
+        </div>
+        <br></br>
+        <!-- End Different bodyshapes -->
+     
+        <!--  Anime -->
+        <h3 class="title is-4">Anime</h3>
+        <h2 class="content has-text-justified">
+          <p style="font-size: 1.4em;">we demonstrate the powerful generalization ability of our model, which can support the creation of new animation characters.</p>
+        </h2>
+        <div id="results-carousel44" class="carousel results-carousel">
+          <div class="gif-container">
+            <img loading="lazy" src="content/gifs/1.gif" class="gif" height="600" />
+          </div>
+
+          <div class="gif-container">
+            <img loading="lazy" src="content/gifs/2.gif" class="gif" height="600" />
+          </div>
+        </div>
+        <!--End  Anime -->
+      </div>
+    </div>
+</section>
+
+
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="title is-4">Refiner</h3>
+        <p style="font-size: 1.4em;">Furthermore, We showcase the effects before and after using the <b>Refiner</b>, demonstrating its ability to significantly enhance the texture and realism of the clothing, while maintaining consistency in the apparel.</p>
+
+        <!-- <p style="text-align: center; font-size: 1.2em;">(Left: <b style="color:rgb(110, 110, 227)">Refiner</b>; Right: <b style="color:rgb(181, 121, 121)">Original</b>)</p> -->
+
+        <div id="results-carousel22" class="carousel results-carousel">
+
+          <div id="example3" class="bal-container-big">
+            <div class="bal-after">
+              <img src="content/images/refiner2/r6.jpg">
+              <div class="bal-afterPosition ">
+                <!-- <b style="color:rgb(181, 121, 121)">Original</b> -->
+              </div>
+            </div>
+
+            <div class="bal-before">
+              <div class="bal-before-inset">
+                <img loading="lazy" src="content/images/refiner2/r5.jpg">
+                <div class="bal-beforePosition ">
+                  <!-- <b style="color: rgb(110, 110, 227);">Refiner</b> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bal-handle">
+              <span class="handle-left-arrow"></span>
+              <span class="handle-right-arrow"></span>
+            </div>
+          </div>
+
+          <div id="example4" class="bal-container-big">
+            <div class="bal-after">
+              <img loading="lazy" src="content/images/refiner2/r8.jpg">
+              <div class="bal-afterPosition ">
+                <!-- <b style="color:rgb(181, 121, 121)">Original</b> -->
+              </div>
+            </div>
+
+            <div class="bal-before">
+              <div class="bal-before-inset">
+                <img loading="lazy" src="content/images/refiner2/r7.jpg">
+                <div class="bal-beforePosition ">
+                  <!-- <b style="color: rgb(110, 110, 227);">Refiner</b> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bal-handle">
+              <span class="handle-left-arrow"></span>
+              <span class="handle-right-arrow"></span>
+            </div>
+          </div>
+
+          <div id="example1" class="bal-container-big">
+            <div class="bal-after">
+              <img loading="lazy" src="content/images/refiner2/r4.jpg">
+              <div class="bal-afterPosition ">
+                <!-- <b style="color:rgb(181, 121, 121)">Original</b> -->
+              </div>
+            </div>
+
+            <div class="bal-before">
+              <div class="bal-before-inset">
+                <img loading="lazy" src="content/images/refiner2/r3.jpg">
+                <div class="bal-beforePosition ">
+                  <!-- <b style="color: rgb(110, 110, 227);">Refiner</b> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bal-handle">
+              <span class="handle-left-arrow"></span>
+              <span class="handle-right-arrow"></span>
+            </div>
+          </div>
+
+
+          <div id="example2" class="bal-container-big">
+            <div class="bal-after">
+              <img loading="lazy" src="content/images/refiner2/r2.jpg">
+              <div class="bal-afterPosition ">
+                <!-- <b style="color:rgb(181, 121, 121)">Original</b> -->
+              </div>
+            </div>
+
+            <div class="bal-before">
+              <div class="bal-before-inset">
+                <img loading="lazy" src="content/images/refiner2/r1.jpg">
+                <div class="bal-beforePosition ">
+                  <!-- <b style="color: rgb(110, 110, 227);">Refiner</b> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bal-handle">
+              <span class="handle-left-arrow"></span>
+              <span class="handle-right-arrow"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Outfit Anyone + <b style="color: rgb(170, 106, 28);">Animate Anyone</b></h2>
+        <h2 class="content has-text-centered">
+          <p style="font-size: 1.4em;">We demonstrate the integration of <b>Outfit Anyone</b> with <b>Animate Anyone</b>, a state-of-the-art pose-to-video model, to achieve outfit changes and motion video generation for any character.</p>
+        </h2>
+        <div >
+          <div class="item item-video1" style="text-align: center;">
+            <video poster="" id="tree" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source loading="lazy" src="content/video/demo_07.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">\
+              <source src="content/video/demo_2.mp4" type="video/mp4">
+            </video>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+  
+  
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Wardrobe</b></h2>
+        <!-- <h2 class="content has-text-centered">
+          <p style="font-size: 1.4em;">We demonstrate the integration of <b>Outfit Anyone</b> with <b>Animate Anyone</b>, a state-of-the-art (SOTA) pose-to-video model, to achieve outfit changes and motion video generation for any character.</p>
+        </h2> -->
+        <div >
+          <div class="item item-video1" style="text-align: center;">
+            <video poster="" id="tree" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source loading="lazy" src="content/video/teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">\
+              <source src="content/video/demo_2.mp4" type="video/mp4">
+            </video>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content" style="text-align: center;">
+            <p>
+              This project is intended solely for academic research and effect demonstration. No commercial benefits are derived from it. 
+              Most models and clothing images used are from internet and public datasets (VITON, DressCode).
+               All images and brands are the property of their respective owners.
+            </p>
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/js/script.js"></script>
+
+  <script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    new BeforeAfter({
+      id: '#example3'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example6'
+    });
+    new BeforeAfter({
+      id: '#example7'
+    });
+
+  </script>
+
+<script>
+  var gifImage = document.getElementById('gifImage');
+  var isPaused = false;
+
+  gifImage.addEventListener('mouseenter', function() {
+    gifImage.src = gifImage.src;
+    isPaused = true;
+  });
+
+  gifImage.addEventListener('mouseleave', function() {
+    if (isPaused) {
+      gifImage.src = gifImage.src;
+      isPaused = false;
+    }
+  });
+</script>
+
+  <script>
+    bulmaCarousel.attach('#results-carousel11', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel22', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel44', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: false,
+      autoplay: false,
+    });
+  </script>
+
+  <script> 
+    document.getElementById('gifImage3').src = 'content/gifs/Item.gif';
+    document.getElementById('gifImage1').src = 'content/gifs/s1.gif';
+    document.getElementById('gifImage2').src = 'content/gifs/s2.gif';
+
+    // 图片资源路径
+    const images = [
+      'content/teaser/t3.gif',
+      'content/teaser/t4.gif',
+      'content/teaser/t1.gif',
+      'content/teaser/t2.gif'
+    ];
+
+    // 获取要插入图片的div
+    const group1 = document.getElementById('group1');
+    const group2 = document.getElementById('group2');
+
+    // 创建并插入前两张图片
+    for (let i = 0; i < 2; i++) {
+      const img = document.createElement('img');
+      img.src = images[i];
+      img.loading = 'lazy';
+      img.alt = '图片' + (i+1);
+      group1.appendChild(img);
+    }
+
+    // 创建并插入后两张图片
+    for (let i = 2; i < images.length; i++) {
+      const img = document.createElement('img');
+      img.src = images[i];
+      img.loading = 'lazy';
+      img.alt = '图片' + (i+1);
+      group2.appendChild(img);
+    }
+
+  </script>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
